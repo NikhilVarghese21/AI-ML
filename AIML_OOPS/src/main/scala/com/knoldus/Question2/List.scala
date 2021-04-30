@@ -19,6 +19,7 @@ class List[A](items: A*) {
       nextElement.foreach(function)
     }
   }
+
   // returns the value at particular index.
   def apply(index: Int): Option[A] = {
     if (index < 1) item else next flatMap (_.apply(index - 1))
